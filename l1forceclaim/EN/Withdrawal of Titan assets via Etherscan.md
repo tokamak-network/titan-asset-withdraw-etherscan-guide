@@ -3,7 +3,6 @@
 ## Introduction
 
 When the Titan Network service is closed, the remaining assets on the Titan network can be withdrawn from the Ethereum network.
-Withdrawal is possible through the UI web service, or users can also withdraw their assets through Etherscan.
 
 This document explains how to withdraw assets through Etherscan.
 
@@ -11,7 +10,7 @@ The `titan_new-generate-assets.json` document provides hashes that can be claime
 
 ## Steps
 
-### Step1. In the "titan_new-generate-assets.json" file, locate your address in the data section corresponding to your desired token.
+### Step 1. In the "titan_new-generate-assets.json" file, locate your address in the data section corresponding to your desired token.
 
 **Note: The token names in the document correspond to the following assets:**
 
@@ -21,7 +20,7 @@ The `titan_new-generate-assets.json` document provides hashes that can be claime
 - USDC → "tokenName": "USD Coin"
 - USDT → "tokenName": "Tether USD"
 
-### Step2. Copy the l1Token address, amount, and hash values corresponding to your address from the `generate-assets3.json` file.
+### Step 2. Copy the l1Token address, amount, and hash values corresponding to your address from the `generate-assets3.json` file.
 
 If you look up the address 0x796C1f28c777b8a5851D356EBbc9DeC2ee51137F,
 If you search below,
@@ -33,9 +32,9 @@ If you search below,
 - `amount`: 77075825179826438
 - `hash`: 0xec4a8c41e7718aceeaeb44d7fdf766e0f0f4b1f25b0af5cc890daae348c35b57
 
-**Note: To convert the amount (77075825179826438) from wei to Ether (decimals 18), divide by 10^18, so you can claim 0.077075825179826438 ETH.**
+**Note: Note: The amount is displayed in wei. To convert to the standard decimal format, divide by 10^18.**
 
-### Step3. Verify if your token is claimable by checking the claim state:
+### Step 3. Verify if your token is claimable by checking the claim state:
 
 - Go to the L1StandardBridge contract on Etherscan ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract))
 - Find the `claimState` function
@@ -45,14 +44,14 @@ If you search below,
   - If `false`: The token is claimable
   - If `true`: The token has already been claimed and cannot be claimed again
 
-### Step4. Look up the contract position that stores the claim information.
+### Step 4. Look up the contract position that stores the claim information.
 
 - Contract: L1StandardBridge ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract))
 - Function: getForcePosition
   - `_hash` (string): Hash value retrieved in Step 2
 - Return (address): **the contract position address**
 
-### Step5. Claim
+### Step 5. Claim
 
 You can claim one asset or multiple assets at once.
 
