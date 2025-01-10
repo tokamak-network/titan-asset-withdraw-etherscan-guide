@@ -6,11 +6,11 @@ When the Titan Network service is closed, the remaining assets on the Titan netw
 
 This document explains how to withdraw assets through Etherscan.
 
-The `titan_new-generate-assets.json` document provides hashes that can be claimed for a specific asset.
+The [`titan_new-generate-assets.json`](https://github.com/tokamak-network/L2-Assets-Migration/blob/genStorage/titanLagacy/data/titan_new-generate-assets.json) document provides hashes that can be claimed for a specific asset.
 
 ## Steps
 
-### Step 1. In the "titan_new-generate-assets.json" file, locate your address in the data section corresponding to your desired token.
+### Step 1. In the ["titan_new-generate-assets.json"](https://github.com/tokamak-network/L2-Assets-Migration/blob/genStorage/titanLagacy/data/titan_new-generate-assets.json) file, locate your address in the data section corresponding to your desired token.
 
 **Note: The token names in the document correspond to the following assets:**
 

@@ -14,7 +14,7 @@ For more information about the Titan Network sunset, please refer to our [offici
    ![image](/assets/finalize/image01.png)
 2. Connect your account into etherscan clicking `Connect to Web3`.
    ![image](/assets/finalize/image02.png)
-3. Search the address of your account where you have pending withdraw transactions in [finalWithdrawInputs.json](https://github.com/tokamak-network/legacy-titan-pending-tx-fetcher/blob/main/storage/sepolia/1734932537532/finalWithdrawalInputs.json) file.
+3. Search the address of your account where you have pending withdraw transactions in [finalWithdrawInputs.json](https://github.com/tokamak-network/legacy-titan-pending-tx-fetcher/blob/main/storage/mainnet/1736489772525/finalWithdrawalInputs.json) file.
    ![image](/assets/finalize/image03.png)
 4. Check if the withdrawal has been already finalized or not:
 
