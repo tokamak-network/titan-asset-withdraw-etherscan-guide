@@ -38,7 +38,7 @@ If you search below,
 ### Step3. Verify if your token is claimable by checking the claim state:
 
 - Go to the L1StandardBridge contract on Etherscan ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract))
-- Find the `claimState` function
+- Find the `claimState` function([link](https://www.notion.so/Withdrawal-of-assets-via-Etherscan-ENG-165d96a400a38029858fee0ee9a9eec7?pvs=4))
 - Enter your hash value from Step 2
 - Click "Query"
 - Check the return value:
