@@ -10,7 +10,7 @@ For more information about the Titan Network sunset, please refer to our [offici
 
 ## Steps
 
-1. Go to the L1StandardBridge contract in etherscan and click `Contract` → `Read as Proxy`.
+1. Go to the [L1CrossDomainMessenger](https://etherscan.io/address/0xfd76ef26315ea36136dc40aeafb5d276d37944ae#readProxyContract) contract in etherscan and click `Contract` → `Read as Proxy`.
    ![image](/assets/finalize/image01.png)
 2. Connect your account into etherscan clicking `Connect to Web3`.
    ![image](/assets/finalize/image02.png)
@@ -18,17 +18,17 @@ For more information about the Titan Network sunset, please refer to our [offici
    ![image](/assets/finalize/image03.png)
 4. Check if the withdrawal has been already finalized or not:
 
-   - Query `failedMessages` (2nd query) with `msgHash` from what you’ve searched and it should be `false`.
+   - Query [failedMessages](https://etherscan.io/address/0xfd76ef26315ea36136dc40aeafb5d276d37944ae#readProxyContract#F2) (2nd query) with `msgHash` from what you’ve searched and it should be `false`.
      ![image](/assets/finalize/image04.png)
      ![image](/assets/finalize/image10.png)
-   - Query `successfulMessages` (8th query) with `msgHash` from what you’ve searched and it should be `false`.
+   - Query [successfulMessages](https://etherscan.io/address/0xfd76ef26315ea36136dc40aeafb5d276d37944ae#readProxyContract#F8) (8th query) with `msgHash` from what you’ve searched and it should be `false`.
      ![image](/assets/finalize/image05.png)
 
    - Both of them should be `false` or it means that withdrawal has been already done and can’t continue the process for that withdrawal. Please give it a try with another withdrawal.
 
 5. Click `Write as Proxy` and connect your account.
    ![image](/assets/finalize/image06.png)
-6. Input the parameters from step 3 into the `relayMessage` method (6th method):
+6. Input the parameters from step 3 into the [relayMessage](https://etherscan.io/address/0xfd76ef26315ea36136dc40aeafb5d276d37944ae#writeProxyContract#F6) method (6th method):
 
    > **⚠️Note**: For the `_proof` parameter, include the entire value with double quotes (`"`)
    > Example input parameters:

@@ -37,7 +37,7 @@ If you search below,
 ### Step 3. Verify if your token is claimable by checking the claim state:
 
 - Go to the L1StandardBridge contract on Etherscan ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract))
-- Find the `claimState` function([link](https://www.notion.so/Withdrawal-of-assets-via-Etherscan-ENG-165d96a400a38029858fee0ee9a9eec7?pvs=4))
+- Find the [claimState](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD?#readProxyContract#F2) function.
 - Enter your hash value from Step 2
 - Click "Query"
 - Check the return value:
@@ -46,8 +46,8 @@ If you search below,
 
 ### Step 4. Look up the contract position that stores the claim information.
 
-- Contract: L1StandardBridge ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract))
-- Function: getForcePosition
+- Contract: L1StandardBridge ([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD?#readProxyContract#F6))
+- Function: [getForcePosition](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD?#readProxyContract#F6)
   - `_hash` (string): Hash value retrieved in Step 2
 - Return (address): **the contract position address**
 
@@ -62,7 +62,7 @@ You can claim one asset or multiple assets at once.
 Go to the L1StandardBridge contract in ethersacn and click `Contract` → `Write as Proxy`.
 
 - Contract: L1StandardBridge
-- Function: `forceWithdrawClaim`
+- Function: [forceWithdrawClaim](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD?#writeProxyContract#F11)
   - `_position` (address): The contract position address returned in step 4
   - `_hash` (string): hash retrieved in step 2
   - `_token` (address): l1Token retrieved in step 2
@@ -75,16 +75,17 @@ After entering the parameters, click the write button to execute the transaction
 
 #### Step 5-2. Claiming multiple assets at once
 
-Go to the L1StandardBridge([link](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD#readProxyContract)) contract in ethersacn and click `Contract` → `Write as Proxy`.
+Go to the [L1StandardBridge](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD) contract in ethersacn and click `Contract` → `Write as Proxy`.
 
 - Contract: L1StandardBridge
 
   ![image](/assets/forceclaim/image03.png)
 
-  - Function: `forceWithdrawClaimBatch`
-    - `params` :
-      Enter each asset claim information as an array in the form of
-      {address `position`, string `hashed`, address `token`, uint256 `amount`, address `getAddress`}
+- Function: [forceWithdrawClaimAll](https://etherscan.io/address/0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD?#writeProxyContract#F12)
+
+  - `params` :
+    Enter each asset claim information as an array in the form of
+    {address `position`, string `hashed`, address `token`, uint256 `amount`, address `getAddress`}
   - examples
 
     When claiming two assets, (1) TON and (2) ETH, enter as in (3).
