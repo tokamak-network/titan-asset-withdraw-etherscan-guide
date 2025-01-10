@@ -6,7 +6,7 @@ Welcome to our step-by-step guide for finalizing your Titan Network withdrawal t
 
 For more information about the Titan Network sunset, please refer to our [official announcement](https://medium.com/tokamak-network/tokamak-network-to-sunset-titan-b4471019c92).
 
-> **Important Note**: If you have multiple pending withdrawals, each transaction must be finalized separately. The estimated gas cost per finalization is approximately ... ETH.
+> **Important Note**: If you have multiple pending withdrawals, each transaction must be finalized separately.
 
 ## Steps
 
